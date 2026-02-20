@@ -1,0 +1,99 @@
+.platform-cards {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.platform-cards-label {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.platform-cards-grid {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.platform-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 18px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    transition: all 0.3s ease;
+    animation: cardFadeIn 0.5s ease backwards;
+    animation-delay: var(--delay);
+    cursor: default;
+    min-width: 80px;
+}
+
+.platform-card:hover {
+    background: var(--glass-bg-hover);
+    border-color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+}
+
+.platform-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--platform-gradient, rgba(255, 255, 255, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.platform-card:hover .platform-card-icon {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+.platform-card-name {
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .platform-card {
+        padding: 12px 14px;
+        min-width: 60px;
+    }
+
+    .platform-card-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
+
+    .platform-card-name {
+        font-size: 0.65rem;
+    }
+}

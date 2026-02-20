@@ -1,0 +1,15 @@
+.tech-grid-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.8;
+    background: radial-gradient(ellipse at 50% 30%,
+            #0d0d25 0%,
+            #080818 30%,
+            #050510 60%,
+            #020208 100%);
+}
